@@ -1,6 +1,4 @@
 /*
-  Patryk Zieliński
-  330261
 
   BLOK WOLNY:
   |HEADER(word_t) NEXT_FREE(word_t) PREV_FREE(word_t) ..... FOOTER(word_t)|
@@ -30,24 +28,6 @@
 
 
   Trzymam kubełki na początku heapa przed dostępnym do użytkownika miejscem
-
-
-  W treści zadania jest napisane aby nie używać typu tablicowego tylko
-  niezainicjowane zmienne także tak robię.
-
-  Moje kubełki na początku są nie zainicjowanie i wygląda to tak: static word_t
-  **class_table;
-
-  Przydzielając im miejsce na moim heapie później używam skrótów class_table[i]
-  jednak można też robić *(class_table + i)
-
-  Używam optymalizacji do śladów binarnych:
-  Przy każdym allocowaniu pamięci dla użytkownika <= 256 tworze 7 dodatkowych
-  wolnych takich bloków za nim Dzięki temu ślady te działają bardzo dobrze a w
-  innych przypadkach też jest fajnie.
-
-  Stworzyłem skrypt w pythonie który sprawdził mi 1500 kombinacji i ta tutaj
-  wyszła najlepiej (9h make gradeów)
 */
 
 #include <assert.h>
